@@ -34,7 +34,7 @@ scoreboard.js - This file manages the game's scoreboard, which tracks the player
 
 scripts.js - This file is the entry point for the game'sJavaScript, initializing the game and connecting all the different components together.
 
-# Installation and Usage**
+# Installation and Usage
 To run the game, follow these steps:
 
 Clone the repository to your local machine.
