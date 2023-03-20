@@ -19,15 +19,22 @@ Players can restart the game at any point by clicking the "New Game" button. Whe
 **The game's logic is built using a modular structure, with separate classes for managing the grid, tiles, input, scoreboard, and game itself. Here's a brief overview of the project structure:
 
 grid.js - This file handles the basic grid functionality, such as creating the grid, initializing the grid with starting colored tiles, and checking for available moves or empty cells.
+
 hexagonalGrid.js - This file is responsible for the specific hexagonal grid logic, such as calculating the positions of hexagonal cells, handling the six possible movement directions, and managing the merging of tiles in the hexagonal grid.
+
 tile.js - This file manages the Tile object, which represents a single tile on the grid. It contains properties like the tile's color and position, as well as methods for merging with other tiles.
+
 game.js - This file is the core of the game logic, responsible for connecting the grid, tiles, and input manager, as well as controlling the game state (e.g., checking for game over or victory conditions).
+
 inputManager.js - This file handles user input, such as detecting arrow key presses, and translating them into actions that the game should perform (e.g., sliding tiles in a specific direction).
+
 powerUp.js - This file manages the Power-Up objects, which can be added as a feature to provide players with special abilities or advantages during gameplay.
+
 scoreboard.js - This file manages the game's scoreboard, which tracks the player's score and time, as well as updating the score display on the game's UI.
+
 scripts.js - This file is the entry point for the game'sJavaScript, initializing the game and connecting all the different components together.
 
-**Installation and Usage
+**Installation and Usage**
 **To run the game, follow these steps:
 
 Clone the repository to your local machine.
