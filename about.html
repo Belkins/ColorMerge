@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Color Merge</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>About Color Merge</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Color Merge: A Colorful Hexagonal Puzzle Game</h2>
+      <p>
+
+        Color Merge is a puzzle game based on a hexagonal grid, where the goal is to merge adjacent tiles of the same color to create new colors and ultimately turn all tiles on the grid into white tiles.
+      
+    </p>
+      <hr>
+      <h3>Project Overview</h3>
+      <p>
+
+        The Color Merge project began as an idea to create a visually appealing and mentally stimulating game that stands out from the crowd of existing puzzle games. Drawing inspiration from 2048, the developers designed a game with a hexagonal grid, adding a new level of complexity and interest to the gameplay.
+     
+    </p>
+      <hr>
+      <h3>Development Process</h3>
+      <p>
+
+        The development of Color Merge involved several stages, including planning, designing, coding, and testing. The project was developed using HTML, CSS, and JavaScript to ensure a smooth and responsive user experience across different devices and platforms. The game's logic and grid structure were carefully planned and implemented to ensure that the game is both challenging and enjoyable for players.
+
+        During the design phase, the developers focused on creating an aesthetically pleasing game interface with a clean and modern look. The color palette was chosen to be visually appealing and to provide clear contrast between different tile colors.
+        
+        As the coding progressed, the team implemented the game logic, input handling, and tile movement, ensuring that the game mechanics worked seamlessly together. Additional features, such as a scoreboard and a timer, were also integrated to enhance the gameplay experience.
+        
+        In the testing phase, the game was thoroughly tested for functionality and compatibility across various devices and browsers. Feedback from playtesters was used to refine the game and make necessary adjustments to improve the overall player experience.
+
+                <hr>
+
+        <h3>Future Enhancements</h3>
+        <p>
+
+          The development team behind Color Merge is continually working on improving the game and adding new features. Some potential future enhancements include:
+       
+        </p>
+        <ul>
+          <li>Adding more color schemes and grid sizes to provide increased variety and challenge</li>
+          <li>Implementing power-ups and special tiles to introduce new strategic elements to the game</li>
+          <li>Developing a mobile app version of the game for iOS and Android devices</li>
+          <li>Creating a global leaderboard to encourage competition and track top scores</li>
+        </ul>
+        <hr>
+
+        <h3>Game Logic </h3>
+      <p>
+
+The game starts with a few randomly colored tiles placed on a hexagonal grid. Players can slide the tiles in six directions (up, down, left, right, up-left, and up-right) by using arrow keys, mouse, or touch gestures. When two adjacent tiles with the same color collide, they merge into a single tile, featuring the next color in the sequence or a slightly different hue if using a color spectrum. After each move, a new colored tile appears on the grid in a random empty cell.
+
+The game has a scoring system that awards points based on the number of merges, and the score is displayed on the screen along with the max score achieved during the last session. The game also has a timer that tracks the time spent on the current game session.
+
+Players can restart the game at any point by clicking the "New Game" button. When there are no empty cells left for new colored tiles to appear and no matching colors are left on the grid, the game is over. A "Game Over!" message is displayed, and players can click the "Try Again" button to restart the game.
+
+The game's UI includes a scoreboard, timer, navigation, game instructions, and a footer with copyright information. The main game area consists of a hexagonal game container, which houses the grid container and tile container. The grid container contains grid rows and grid cells, while the tile container is responsible for managing the movement, colors, and collisions of tiles.
+
+The game's logic is built using a modular structure, with separate classes for managing the grid, tiles, input, scoreboard, and game itself. This modular design makes it easy to extend the game with new features or modify existing functionality.
+
+By strategically sliding and merging colored tiles, players can develop their problem-solving skills and enjoy a fun, challenging gaming experience.
+
+                <hr>
+
+        <h3>Future Enhancements</h3>
+        <p>
+          The development team 
+
+        <h3>Contact Information</h3>
+        <p>
+          We appreciate your interest in Color Merge and welcome any feedback or suggestions you may have. Please feel free to contact us at: <a href="mailto:color-merge-support@example.com">color-merge-support@example.com</a>.
+        </p>
+        </section>
+        </main>
+        <hr>
+        <footer>
+            <p>&copy; Vladyslav Podoliako. All rights reserved.</p>
+        </footer>
+        <script type="module" src="scripts/tile.js"></script>
+        <script type="module" src="scripts//grid.js"></script>
+        <script type="module" src="scripts/hexagonalGrid.js"></script>
+        <script type="module" src="scripts/powerUp.js"></script>
+        <script type="module" src="scripts/inputManager.js"></script>
+        <script type="module" src="scripts/scoreboard.js"></script>
+        <script type="module" src="scripts//game.js"></script>
+        <script type="module" src="scripts/scripts.js"></script>
+        </body>
+        </html>

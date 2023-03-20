@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Merge</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <h1>Color Merge</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="game-section">
+      <div class="scoreboard">
+        <div class="score">
+          <h3>Score</h3>
+          <p id="score">0</p>
+        </div>
+        <div class="max-score">
+          <h3>Max Score</h3>
+          <p id="max-score">0</p>
+        </div>
+        <div class="timer">
+          <h3>Time</h3>
+          <p id="timer">
+            00:00</p>
+          </div>
+        </div>
+      
+        <button id="new-game">New Game</button>
+      
+        <div class="game-container">
+          <div class="game-message-container" id="game-message-container">
+            <p>Game Over!</p>
+            <button id="try-again">Try Again</button>
+          </div>
+          <div class="grid-container" id="game-grid"></div>
+        </div>
+      </section>
+      
+      <section class="Game-Instructions">
+        <h2>How to Play</h2>
+        <ol>
+          <li>Use the arrow keys to slide tiles in six directions on the hexagonal grid.</li>
+          <li>Merge tiles of the same color to create a new color in the sequence or a slightly different hue if using a color spectrum.</li>
+          <li>When two adjacent tiles with the same color collide, they merge into a single tile featuring the next color in the sequence.</li>
+          <li>After each move, a new colored tile appears on the grid in a random empty cell.</li>
+          <li>The game ends when there are no empty cells left for new colored tiles to appear, and no matching colors are left on the grid.</li>
+          <li>The primary goal of the game is to turn all tiles on the grid into white tiles by strategically sliding and merging colored tiles.</li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Vladyslav Podoliako. All rights reserved.</p>
+    </footer>
+      </div>
+    </div>
+    <script type="module" src="/scripts/tile.js"></script>
+    <script type="module" src="/scripts/grid.js"></script>
+    <script type="module" src="/scripts/hexagonalGrid.js"></script>
+    <script type="module" src="/scripts/powerUp.js"></script>
+    <script type="module" src="/scripts/inputManager.js"></script>
+    <script type="module" src="/scripts/scoreboard.js"></script>
+    <script type="module" src="/scripts/game.js"></script>
+    <script type="module" src="/scripts/scripts.js"></script>
+  
+    <script>
+      // Initialize the game
+      document.addEventListener("DOMContentLoaded", () => {
+        resetGame();
+      });
+    </script>
+  </body>
+</html>
