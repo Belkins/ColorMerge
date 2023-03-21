@@ -47,5 +47,5 @@ Submit a pull request to the main repository for review.
 License
 Color Merge is licensed under the MIT License. You are free to use, modify, and distribute the game as long as you include the original copyright notice and license.
 
-# Conclusion
+# Summary
 Color Merge is a fun and challenging puzzle game that combines the simplicity of 2048 with the complexity of a hexagonal grid. The game is built using a modular structure, making it easy to modify or extend with new features. With its visually appealing design and engaging gameplay, Color Merge is sure to provide hours of entertainment for players of all ages.
