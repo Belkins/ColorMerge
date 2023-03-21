@@ -1,7 +1,7 @@
 import { createHexagonalGrid, Game } from './game.js';
-import { InputManager } from './inputManager.js';
-import { PowerUp } from './powerUp.js';
-import { Scoreboard } from './scoreboard.js';
+import InputManager from './inputManager.js';
+import Tile from './tile.js';
+import Scoreboard from './scoreboard.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const gridContainer = document.getElementById('game-grid');
@@ -34,4 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   scoreboard.displayDailyScores();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  resetGame();
 });

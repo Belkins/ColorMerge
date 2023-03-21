@@ -1,5 +1,5 @@
 import { Tile, ObstacleTile, TransformationTile } from "./tile.js";
-import Grid from "./grid.js";
+import Grid from "./hexGrid.js";
 import { PowerUp, PowerUpManager } from "./powerUp.js";
 import InputManager from "./inputManager.js";
 import Scoreboard from "./scoreboard.js";
@@ -146,19 +146,21 @@ const yPos = x * ((3 / 4) * cellSize + cellMargin);
 }
 
     // Add the updateTimer method here, within the Game class
-    updateTimer() {
-      const timerElement = document.getElementById("timer");
-      const minutes = Math.floor(this.timer / 60);
-      const seconds = this.timer % 60;
+    updateTimer();
+      const now = new Date();
+      const elapsedTime = Math.floor((now - this.startTime) / 1000);
+      const minutes = Math.floor(elapsedTime / 60);
+      const seconds = elapsedTime % 60;
+    
       timerElement.innerText = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    }
+    
 
-  restart() {
+  restart();
     // ... restart logic
     this.updateUI();
-  }
+  
 
   // ... other methods and game logic
-}
 
-export default Game;
+
+  export default Game;
