@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Merge</title>
-  <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Merge Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
     <h1>Color Merge</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section class="game-section">
-      <div class="scoreboard">
-        <div class="score">
-          <h3>Score</h3>
-          <p id="score">0</p>
+    <!-- Part 1: Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+    
+    <!-- Part 2: Scoreboard and timer -->
+    <div class="scoreboard">Score: <span id="score">0</span></div>
+    <div class="timer">Time: <span id="time">60</span>s</div>
+    
+    <!-- Part 3: Game container -->
+    <div class="game-container">
+        <button class="new-game-button" id="newGame">New Game</button>
+        
+        <!-- Part 4: Hexagon container and grid -->
+        <div class="hexagon-container">
+            <div class="grid-container" id="gridContainer"></div>
+            <div class="tiles-container" id="tilesContainer"></div>
         </div>
-        <div class="max-score">
-          <h3>Max Score</h3>
-          <p id="max-score">0</p>
+        
+        <!-- Part 5: Game message container -->
+        <div class="game-message-container" id="gameMessageContainer">
+            <p>Game Over</p>
+            <button class="new-game-button">Try Again</button>
         </div>
-        <div class="timer">
-          <h3>Time</h3>
-          <p id="timer">
-            00:00</p>
-          </div>
-        </div>
+    </div>
       
-        <button id="new-game">New Game</button>
-      
-        <div class="game-container">
-          <div class="game-message-container" id="game-message-container">
-            <p>Game Over!</p>
-            <button id="try-again">Try Again</button>
-          </div>
-          <div class="grid-container" id="game-grid"></div>
-        </div>
-      </section>
-      
-      <section class="Game-Instructions">
+    <!-- Part 6: Game instructions and footer -->
+    <div class="game-instructions">
         <h2>How to Play</h2>
+        <p>Combine adjacent cells of the same color to score points. Avoid obstacles and use transformations to your advantage!</p>
+      </div>
         <ol>
           <li>Use the arrow keys to slide tiles in six directions on the hexagonal grid.</li>
           <li>Merge tiles of the same color to create a new color in the sequence or a slightly different hue if using a color spectrum.</li>
@@ -59,9 +50,9 @@
         </ol>
       </section>
     </main>
-    <footer>
-      <p>&copy; Vladyslav Podoliako. All rights reserved.</p>
-    </footer>
+    <footer class="footer">
+      <p>&copy; Vladyslav Podoliako /2023 - Color Merge Game</p>
+  </footer>
       </div>
     </div>
     <script type="module" src="/scripts/tile.js"></script>

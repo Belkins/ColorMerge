@@ -1,4 +1,6 @@
+
 /* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +9,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   background-color: #faf8ef;
   color: #776e65;
   display: flex;
@@ -46,7 +48,7 @@ nav a:hover {
   font-size: 24px;
   font-weight: bold;
   color: white;
-  margin: 5px;
+  margin-left: 10px;
 }
 
 /* Game container */
@@ -56,13 +58,18 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   background-color: #bbada0;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  
 }
+@media (min-width: 768px) {
+  .game-container {
+    max-width: 700px;
+  }
 
 .new-game-button {
   background-color: #8f7a66;
@@ -89,7 +96,7 @@ nav a:hover {
   height: 0;
   padding-bottom: calc(100% - 2 * 5px);
   overflow: hidden;
-  margin: 10px;
+  margin: 10px 10px 30px;
   background-color: #bbada0;
   border-radius: 5px;
   clip-path: polygon(
@@ -139,9 +146,9 @@ nav a:hover {
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 50px solid;
+  border-left: calc(2.5% - 1px) solid transparent;
+  border-right: calc(2.5% - 1px) solid transparent;
+  border-bottom: 5% solid;
   z-index: 1;
   }
   
@@ -161,6 +168,8 @@ nav a:hover {
   color: white;
   border-radius: 5px;
   z-index: 2;
+  transition: all 0.2s ease-in-out;
+
   }
   
   .color-tile {
@@ -206,7 +215,37 @@ nav a:hover {
   margin: 20px;
   font-size: 18px;
   text-align: center;
+  line-height: 1.5;
   }
+
+  .power-up-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .power-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .power-up:hover {
+    opacity: 0.8;
+  }
+  
+  .power-up-icon {
+    font-size: 24px;
+  }
+  
+  .power-up-count {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
   
   /* About page */
   
@@ -218,3 +257,5 @@ nav a:hover {
   line-height: 1.6;
   text-align: justify;
   }
+
+  

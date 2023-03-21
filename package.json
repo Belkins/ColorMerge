@@ -1,0 +1,20 @@
+{
+  "name": "colormerge",
+  "version": "1.0.1",
+  "description": "        Color Merge is a puzzle game based on a hexagonal grid, where the goal is to merge adjacent tiles of the same color to create new colors and ultimately turn all tiles on the grid into white tiles.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belkins/ColorMerge.git"
+  },
+  "author": "Vladyslav Podoliako",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Belkins/ColorMerge/issues"
+  },
+  "homepage": "https://github.com/Belkins/ColorMerge#readme"
+}
