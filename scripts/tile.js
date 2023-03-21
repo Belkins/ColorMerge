@@ -1,10 +1,13 @@
-// tile.js
-
 export class Tile {
-  constructor(row, col, color) {
-    this.row = row;
-    this.col = col;
+  constructor(x, y, color) {
+    this.x = x;
+    this.y = y;
     this.color = color;
+  }
+
+  updatePosition(position) {
+    this.x = position.x;
+    this.y = position.y;
   }
 
   canMergeWith(tile) {
@@ -13,7 +16,7 @@ export class Tile {
 
   mergeWith(tile) {
     const mergedColor = this.getMergedColor(this.color, tile.color);
-    return new Tile(this.row, this.col, mergedColor);
+    return new Tile(this.x, this.y, mergedColor);
   }
 
   getMergedColor(color1, color2) {
@@ -54,8 +57,8 @@ export class Tile {
 }
 
 export class ObstacleTile extends Tile {
-  constructor(row, col) {
-    super(row, col, null); // No color for obstacle tiles
+  constructor(x, y) {
+    super(x, y, null); // No color for obstacle tiles
   }
 
   // Override the merge method so that obstacle tiles cannot merge
@@ -65,8 +68,8 @@ export class ObstacleTile extends Tile {
 }
 
 export class TransformationTile extends Tile {
-  constructor(row, col) {
-    super(row, col, null); // No color for transformation tiles
+  constructor(x, y) {
+    super(x, y, null); // No color for transformation tiles
     this.isTransformationTile = true;
   }
 
@@ -76,3 +79,4 @@ export class TransformationTile extends Tile {
   }
 }
 
+export default Tile;

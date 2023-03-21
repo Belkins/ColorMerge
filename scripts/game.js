@@ -18,7 +18,7 @@ class Game {
   initialize() {
     // Set up event listeners
     this.inputManager.on("move", (direction) => this.move(direction));
-    this.inputManager.on("restart", () => this.restart());
+    this.inputManager.on("restart", () => this.restart()); 
     console.log("Initializing game..."); // Debugging
 
 
@@ -59,12 +59,13 @@ class Game {
   addRandomTile() {
     const tile = this.grid.randomAvailableCell();
     console.log("Adding random tile..."); // Debugging
-
+  
     if (tile) {
-      const newTile = new Tile(tile.row, tile.col, this.randomColor());
+      const newTile = new Tile(tile.x, tile.y, this.randomColor());
       this.grid.addTile(newTile);
     }
   }
+  
   randomColor() {
     const colors = ["red", "blue", "green", "yellow"];
     return colors[Math.floor(Math.random() * colors.length)];
@@ -75,15 +76,16 @@ class Game {
     // Call the move method and get the score in the same line
     const moveScore = this.grid.move(direction);
     const moved = this.grid.serialize() !== previousGrid;
-
+  
     if (moved) {
-      this.addRandomTile();
+      this.grid.addRandomTile();
       this.grid.checkAndExpandBoard();
       this.updateUI();
     }
     // Update the current game score
     this.currentScore += moveScore;
   }
+  
   updateUI() {
     const gridContainer = document.getElementById("game-grid");
     gridContainer.innerHTML = "";
@@ -91,20 +93,20 @@ class Game {
     const cellSize = 50; // Set the size of each hexagonal cell
     const cellMargin = 5; // Set the margin between cells
 
-    for (let row = 0; row < this.grid.size; row++) {
-      for (let col = 0; col < this.grid.size; col++) {
+    for (let x = 0; x < this.grid.size; x++) {
+      for (let y = 0; y < this.grid.size; y++) {
         const cell = document.createElement("div");
         cell.classList.add("hexagonal-cell");
 
-        const xPos = (col * (cellSize + cellMargin)) + (row % 2 === 0 ? 0 : (cellSize / 2) + (cellMargin / 2));
-        const yPos = row * ((3 / 4) * cellSize + cellMargin);
+        const xPos = (y * (cellSize + cellMargin)) + (x % 2 === 0 ? 0 : (cellSize / 2) + (cellMargin / 2));
+const yPos = x * ((3 / 4) * cellSize + cellMargin);
 
         cell.style.width = `${cellSize}px`;
         cell.style.height = `${cellSize}px`;
         cell.style.left = `${xPos}px`;
         cell.style.top = `${yPos}px`;
 
-        const tile = this.grid.cellContent({ row, col });
+        const tile = this.grid.cellContent({ x, y });
 
         if (tile) {
           const tileElement = document.createElement("div");
